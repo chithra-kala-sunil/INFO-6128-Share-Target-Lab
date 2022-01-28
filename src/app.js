@@ -8,8 +8,7 @@ const elements ={
 function onShare() {
   console.log('share btn clicked');
 
-  if (navigator.share) {
-   
+  // if (navigator.share) {
     navigator.share({
       title,
       text,
@@ -17,8 +16,8 @@ function onShare() {
     })
       .then(() => console.log('Successful share'))
       .catch((error) => console.log('Error sharing', error));
-  } else {
-    console.log('navigator not working');
-  }
+  // } else {
+  //   console.log('navigator not working');
+  // }
 }
 elements.shareBtn.addEventListener('click',onShare);
